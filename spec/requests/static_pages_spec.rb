@@ -37,5 +37,16 @@ describe "Static pages" do
     end
   end
 
+  describe "Contact page" do
+    it "should have the content, 'contact me at: james@bibble.com'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('james@bibble.com')
+    end
+
+    it "should have a title of 'Contact page'" do
+      visit '/static_pages/contact'
+      expect(page).to have_title('Contact')
+    end
+  end
 
 end
