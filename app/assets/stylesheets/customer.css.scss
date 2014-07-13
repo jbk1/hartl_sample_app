@@ -20,11 +20,10 @@ textarea {
 
 .center {
 	text-align: center;
-}
-
-.center h1 {
-	margin-bottom: 10px;
-}
+	 h1 {
+		margin-bottom: 10px;
+		}
+	}
 
 /* Typography */
 
@@ -65,11 +64,11 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+	
+	&:hover {
+	  color: #fff;
+	  text-decoration: none;
+	}
 }
 
 /* footer */
@@ -83,10 +82,10 @@ footer {
 
 footer a {
   color: #555;
-}
 
-footer a:hover {
-  color: #222;
+	&:hover {
+	  color: #222;
+	}
 }
 
 footer small {
@@ -96,9 +95,9 @@ footer small {
 footer ul {
   float: right;
   list-style: none;
-}
 
-footer ul li {
-  float: left;
-  margin-left: 10px;
+	li {
+	  float: left;
+	  margin-left: 10px;
+	}
 }
