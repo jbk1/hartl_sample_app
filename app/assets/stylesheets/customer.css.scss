@@ -79,14 +79,14 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: @graylight;
+  color: #999;
 }
 
 footer a {
-  color: $gray;
+  color: #555;
 
 	&:hover {
-	  color: $grayDarker;
+	  color: #222;
 	}
 }
 
