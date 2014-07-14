@@ -5,18 +5,19 @@ describe "Static pages" do
   let(:base_title) {"JBK Sample App"}
 
   describe "Home page" do
+    # before {}
     it "should have the contect 'Sample App'" do
-    	visit home_path
+    	visit root_path
     	expect(page).to have_content('Sample App')
     end
 
     it "should have the correct title" do
-      visit home_path
+      visit root_path
       expect(page).to have_title("#{base_title}")
     end
 
     it "should not have a custom page title" do
-      visit home_path
+      visit root_path
       expect(page).not_to have_title('| Home')
     end
   end
