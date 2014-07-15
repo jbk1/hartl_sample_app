@@ -1,13 +1,11 @@
 module ApplicationHelper
 
 	def full_title(page_title)
-		base_title = "JBK Sample App"
+		base_title = "Hartl tutorial"
 		if page_title.empty?
 			base_title
-		else
-			"#{base_title} | #{page_title}"
+		else "#{base_title} | #{page_title}"
 		end
 	end
-
 
 end
