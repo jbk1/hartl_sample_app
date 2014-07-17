@@ -20,8 +20,6 @@ development:
   database: sample_app_development
   pool: 5
   host: localhost
-  username: jamesbkemp
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -50,13 +48,9 @@ test:
   database: sample_app_test
   pool: 5
   host: localhost
-  username: jamesbkemp
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: sample_app_production
   pool: 5
-  username: jamesbkemp
-  password:
