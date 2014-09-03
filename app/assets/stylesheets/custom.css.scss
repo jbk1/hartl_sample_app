@@ -11,6 +11,8 @@ $greyMediumLight: #eaeaea;
 }
 
 $lightGray: #999;
+$black: #222;
+$limeGreen: #05E816;
 
 /* Universal */
 
@@ -32,10 +34,10 @@ textarea {
 
 .center {
 	text-align: center;
-	 h1 {
-		margin-bottom: 10px;
-		}
-	}
+  h1 {
+    margin-bottom: 10px;
+  }
+}
 
 /* Typography */
 
@@ -76,11 +78,11 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-	
-	&:hover {
-	  color: #fff;
-	  text-decoration: none;
-	}
+  
+  &:hover {
+   color: #fff;
+   text-decoration: none;
+ }
 }
 
 /* sidebar */
@@ -133,30 +135,24 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $blueDark;
   color: #999;
+  a {
+    color: #555;
+    &:hover {
+      color: $limeGreen;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+  }
+  li {
+    float: left;
+    margin-left: 10px;
+  }
 }
-
-footer a {
-  color: #555;
-
-	&:hover {
-	  color: #222;
-	}
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-
-	li {
-	  float: left;
-	  margin-left: 10px;
-	}
-}
-
 
 /* miscellaneous */
 
