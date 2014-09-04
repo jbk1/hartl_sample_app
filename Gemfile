@@ -8,6 +8,7 @@ gem 'rails', '4.0.8'
 
 group :development, :test do
 	gem 'rspec-rails', '2.13.1'
+	gem 'annotate', '~> 2.6.5'
 end
 
 group :test do
