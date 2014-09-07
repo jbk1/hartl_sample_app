@@ -59,7 +59,7 @@ describe User do
 
 			describe 'when email format is valid' do
 				it 'should be_valid' do
-					addresses = %w[user@foo.com a_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
+					addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
 					addresses.each do  |valid_address|
 						@user.email = valid_address
 						expect(@user).to be_valid
@@ -99,7 +99,7 @@ describe User do
 			before { @user.save }
 			let(:found_user) { User.find_by(email: @user.email) }
 
-			describe 'with invalid password' do
+			describe 'with valid password' do
 				it { should eq found_user.authenticate(@user.password) }
 			end
 
