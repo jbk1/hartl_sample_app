@@ -39,9 +39,13 @@ private
   def user_params
   	params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
+# before filters
 
   def signed_in_user
-    redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in." 
+    end
   end
 
   def correct_user
