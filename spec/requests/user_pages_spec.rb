@@ -165,7 +165,7 @@ describe "UserPages" do
       end
 
       it { should have_title(full_title('Following')) }
-      it { should have_selector('h3', text: 'Followiing') }
+      it { should have_selector('h3', text: 'Following') }
       it { should have_link(other_user.name, href: user_path(other_user)) }
     end
 
