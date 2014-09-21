@@ -12,6 +12,7 @@ describe "Authentication" do
   	# this above test is commented out as i'm sure it's failing due to a versioning issue.
   end
 
+
   describe "signin" do
   	before { visit signin_path }
 
@@ -45,6 +46,7 @@ describe "Authentication" do
         it { should have_link('Sign in') }
       end
     end
+
 
     describe "authorization" do
         let(:user) { FactoryGirl.create(:user) }
@@ -105,7 +107,19 @@ describe "Authentication" do
               expect(page).to have_title('Edit user')
             end
           end
-        end 
+        end
+
+        describe "in the Relationships controller" do
+          describe "submitting to the create action" do
+            before { post relationships_path }
+            specify { expect(response).to redirect_to(signin_path) }
+          end
+
+          describe "submitting to the destroy action" do
+            before { delete relationship_path(1) }
+            specify { expect(response).to redirect_to(signin_path) }
+          end
+        end
       end
 
       describe "as a wrong user" do
@@ -138,7 +152,7 @@ describe "Authentication" do
           specify { expect(response).to redirect_to(root_url) }
         end
       end
-
     end
+
   end
 end
